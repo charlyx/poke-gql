@@ -19,6 +19,7 @@
   "homepage": "https://github.com/charlyx/poke-gql#readme",
   "dependencies": {
     "apollo-server": "^2.2.6",
-    "graphql": "^14.0.2"
+    "graphql": "^14.0.2",
+    "pokedex-promise-v2": "^3.1.1"
   }
 }
