@@ -22,14 +22,14 @@ const typeDefs = gql`
 
 const resolvers = {
   Query: {
-    pokemon: (parent, args, context) => {
-      return context.pokedex.getPokemonByName(name);
+    pokemon: (parent, { name }, { dataSources }) => {
+      return dataSources.pokedex.getPokemonByName(name);
     },
   },
   Pokemon: {
-    abilities: (parent, args, context) => {
+    abilities: (parent, args, { dataSources }) => {
       const abilities = parent.abilities.map(({ ability }) => {
-        return context.pokedex.getAbilityByName(ability.name);
+        return dataSources.pokedex.getAbilityByName(ability.name);
       });
 
       return Promise.all(abilities);
@@ -40,7 +40,7 @@ const resolvers = {
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-  context: () => ({
+  dataSources: () => ({
     pokedex: new Pokedex()
   })
 });
