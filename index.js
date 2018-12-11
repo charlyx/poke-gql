@@ -1,5 +1,5 @@
 const { ApolloServer, gql } = require('apollo-server');
-const Pokedex = require('pokedex-promise-v2');
+const { PokeAPI } = require('./PokeAPI');
 
 const typeDefs = gql`
   type Pokemon {
@@ -41,7 +41,7 @@ const server = new ApolloServer({
   typeDefs,
   resolvers,
   dataSources: () => ({
-    pokedex: new Pokedex()
+    pokedex: new PokeAPI()
   })
 });
 
