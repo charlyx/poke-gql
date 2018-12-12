@@ -16,8 +16,7 @@ exports.PokeAPI = class PokeAPI extends RESTDataSource {
 
   async getEvolutionChain(pokemonId) {
     const species = await this.get(`/pokemon-species/${pokemonId}`)
-    const evolId = species.evolution_chain.url.split('/').slice(-2, -1)
-    let evolChain = await this.get(`/evolution-chain/${evolId}`).then(r => r.chain)
+    let evolChain = await this.get(species.evolution_chain.url).then(r => r.chain)
 
     const evolutions = []
 
