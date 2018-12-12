@@ -123,7 +123,7 @@ Maintenant, écrivez le resolver de votre Query pour récupérer le pokémon par
 
 Testez le dans le Playground.
 
-## 3.4/ Relier les capacités
+### 3.4/ Relier les capacités
 
 Une fois que vous avez réussi à requêter un pokémon. Ajouter le type "Ability" et une relation à Pokémon.
 
@@ -133,4 +133,10 @@ Faites le nécessaire pour récupérer les capacités d'un pokémon.
 
 ## 4/ Pour aller plus loin
 
-...
+Vous êtes rendu jusque là ? Bravo !
+
+Voici une liste d'instructions pour aller plus loin:
+
+- Faire une requête pour récupérer la liste complète des pokémons _(Difficulté: +)_
+- Récupérer la liste des évolutions d'un pokémon _(Difficulté: ++)_
+- Mettre en place une application frontend qui requête votre api GraphQL _(Difficulté: +++)_
