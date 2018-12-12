@@ -96,13 +96,13 @@ Pour faciliter vos appels REST, vous allez ensuite créer la `DataSource` qui va
 Pour tester votre dataSource:
 
 ```js
-;async () => {
+;(async () => {
   const dataSource = new MyDataSource()
 
   const pokemon = await dataSource.getPokemonByName('charmander')
 
   console.log(pokemon)
-}
+})()
 ```
 
 ### 3.3/ Resolvers
